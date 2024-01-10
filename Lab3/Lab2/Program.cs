@@ -1,5 +1,6 @@
 ﻿using Lab2.Entities;
 using Lab2.Exceptions;
+using System.Web.Script.Serialization;
 
 namespace Lab2;
 
@@ -116,5 +117,7 @@ class Program
         {
             Console.WriteLine("Equation not found.");
         }
+         var json = new JavaScriptSerializer().Serialize(obj);
+        Console.WriteLine(json);
     }
 }
